@@ -11,16 +11,17 @@ public class PruebaEscritura {
 		BufferedWriter bw = null;
 		
 		try {
-			bw =  new BufferedWriter(new FileWriter("src/pruebas/fichero.txt", true));
+			bw =  new BufferedWriter(new FileWriter("src/pruebas/ficheroNuevo.txt", true));
 			bw.write("volvemos a cambiar");
 			bw.newLine();
-			bw.flush();
+			
 			
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} finally {
 			try {
+				bw.flush();
 				bw.close();
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
